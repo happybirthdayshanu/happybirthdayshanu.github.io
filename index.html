@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Happy Birthday Shanu </title>
+		<link rel="shortcut icon" type="image/x-icon" href="https://cdn1.iconfinder.com/data/icons/nuvola2/32x32/apps/cookie.png">
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+	</head>
+	<body onclick="change();">
+		<div id="one" class="ui segment" style="background:#F8BBD0;margin-left:34%;margin-right:30%;margin-top:7%;width:500px;height:auto">
+			<div class="ui form" style="">
+				<div class="ui " style="text-align:center">
+					<h1 id="msg" class="ui center" style="text-align:center;">Hello Shanu ...</h1>
+					<br>
+				</div>
+				<br>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="last" style="margin-left:5%;display:none" class="ui three column grid">
+		  <div class="column">
+		      <img  class="ui medium circular image" src="left.jpg"> 
+		  </div>
+		  <div class="column">
+		       <img  class="ui medium circular image" src="center.jpg">
+		  	
+		  </div>
+		  <div class="column">
+		    	<img  class="ui medium circular image" src="right.jpg">
+		  </div>
+		</div>
+		<h3 style=" position: fixed;bottom: 0;right: 0;"></h3>
+	</body>
+	<script type="text/javascript"> 
+		var ch =0;
+		var msgs = ["Hello Shanu ...", "You would be thinking what is this ...", "Aaj ke din hi aap iss duniya mein padhari thi &#128540;","So let me wish you on this 'auspicious' day &#x1f61c;", "Wish you a very Happy Birthday Shanu &#128515;, abhi k liye yahi gift, baaki milne pe party karenge &#128515;"]
+		function change() {
+			// $('#' + ch).show();
+			// $('#wish').hide();
+			// if(ch === 6)
+			// {
+			// }
+			// $('#msg').text(msgs[ch]);
+			if(ch>3)
+				return ;
+			$('#one')
+			  .transition({
+			        animation: 'fly up',
+			        onComplete: function() {
+						$('#msg').html(msgs[ch]);
+						if(ch === 4) {
+
+							$('#one').css("margin-top", "2%");
+							// $('#msg').append("&#10084;");
+							// $('#msg').append("<br>");
+							// $('#wish').text(s);
+							$('#last').transition('fade in', '800ms');
+						}
+			            // alert('done');
+			        }
+		      	})
+			  .transition('fly ' + "up")
+			;
+			// $('#msg').text(" ");
+			// $('#1')
+			//   .transition('fly ' + "up");
+			// ;
+			// $('#1').show();
+
+			// console.log('fly ' + tr[f]);
+			ch = ch + 1;
+			// alert('hello');
+		}
+		window.setInterval(function(){
+  /// call your function here
+  		change();
+		}, 3000);
+	</script>
+	<style type="text/css">
+		body {
+			background-image: url("bg.jpg");
+
+		}
+	</style>
+</html>
